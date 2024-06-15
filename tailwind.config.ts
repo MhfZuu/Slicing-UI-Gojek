@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily:{
+        "heading":["var(--font-gojek","sans-serif"],
         "header1":["text-red font-medium"]
       },
       color:{
