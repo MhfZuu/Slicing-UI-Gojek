@@ -7,7 +7,7 @@ import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 
 const bahasa =["Bahasa Indonesia", "Bahasa Inggris"];
 const company=["About", "Newsroom","Safety","Sustainability"];
-const partners=["Driver Partrner", "Merchant Partner"];
+const partners=["Driver Partner", "Merchant Partner"];
 
 function DropDown(text: string, key: string[]){
     const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,8 @@ function DropDown(text: string, key: string[]){
         <div>
             <div className="flex gap-1 items-center cursor-pointer" onClick={()=>setIsOpen(!isOpen)}>
                 <p>{text}</p>
-                {isOpen ? <IoChevronUp className="h-6 pt-1.5" /> : <IoChevronDown className="h-6 pt-1.5" />}
+                {isOpen? <IoChevronDown className="rotate-180  ease-in duration-200 h-6 -pt-1" />:
+                         <IoChevronDown className="ease-in duration-200 h-6 -pt-1" />}
             </div>
             {isOpen && ExtendDD(key)}
         </div>
@@ -25,10 +26,10 @@ function DropDown(text: string, key: string[]){
 function ExtendDD(args: string[]){
     return(
         <div className="absolute min-w-52 min-h-24 bg-gray-900
-                        top-10 grid auto-rows-auto px-4 py-3
-                        rounded-md -right-2">
+                        top-10 grid grid-cols-1 px-4 py-6
+                        rounded-[15px] -right-2 gap-y-6">
             {args.map((arg) => (
-                <Link href="/" >{arg}</Link>
+                <Link href="/" className="text-base hover:underline" >{arg}</Link>
             ))}
         </div>
     );
@@ -36,15 +37,15 @@ function ExtendDD(args: string[]){
 
 export default function Navbar(){ 
     return (
-        <nav className='ticky top-0 flex text-white 
-                        min-h-20 bg-black py-8 px-5 
+        <nav className='sticky top-0 flex text-white 
+                        min-h-20 bg-gray-950 py-8 px-5 
                         justify-between --font-gojek text-lg'>
             <Link href="/" className="px-[20px]">
                 <Image 
                     src="/gojek-horizontal-logo-white.svg" 
                     alt="logo gojek" 
-                    width={100} 
-                    height={80}
+                    width={120} 
+                    height={32}
                 />
             </Link>
             
