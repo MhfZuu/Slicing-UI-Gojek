@@ -37,11 +37,11 @@ function ExtendDD(args: string[]){
 
 export default function Navbar(){ 
     return (
-        <nav className='sticky top-0 flex text-white 
-                        min-h-20 bg-gray-950 py-8 px-5 
-                        justify-between --font-gojek text-lg'>
+        <nav className='w-full fixed z-50 top-0 flex text-white px-0
+                        h-20 md:h-24 md:px-4 bg-gray-900 items-center md:py-8 
+                        justify-between font-gojek text-lg'>
             <Link href="/" className="px-[20px]">
-                <Image 
+                <Image className='w-[100px] md:w-[120px]'
                     src="/gojek-horizontal-logo-white.svg" 
                     alt="logo gojek" 
                     width={120} 

@@ -8,12 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      borderRadius:{
+        '6xl' : '70px'
+      },
       fontFamily:{
         "heading":["var(--font-gojek","sans-serif"],
         "header1":["text-red font-medium"]
       },
       color:{
-        "white":"#FFFFFF"
+        "white":"#ffffff",
+        "hijaugojek": "#00880d"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
