@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+ .swiper-pagination-bullet-active{
+  opacity: 1;
+  background:#00880d;
+ }
