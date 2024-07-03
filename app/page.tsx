@@ -1,6 +1,7 @@
 import Navbar from "../Components/reusable-components/Navbar";
 import Hero from "../Components/reusable-components/Hero";
 import Cardsec1 from "../Components/reusable-components/Cardsec1";
+import Cardsec2 from "../Components/reusable-components/Cardsec2";
 import Footer from "../Components/reusable-components/Footer";
 
 export default function Home() {
@@ -9,9 +10,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Cardsec1 />
-      {/* <div className='relative h-screen bg-gray-900 z-50'>
-        hllh
-      </div> */}
+      <Cardsec2 />
       <Footer />
     </body>
   );
