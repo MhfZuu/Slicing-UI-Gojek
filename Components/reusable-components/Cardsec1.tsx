@@ -2,11 +2,12 @@
 
 import Image from 'next/image';
 import {Swiper,SwiperSlide} from 'swiper/react';
+import {Pagination, Navigation} from 'swiper/modules'
+import SwiperNavBtn from '../reusable-components/SwiperNavBtn'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import {Pagination} from 'swiper/modules'
+import 'swiper/css/navigation'
 import '@/app/globals.css'
-
 
 function Card(imageUrl :string, title :string, desc :string){
     return(
@@ -32,13 +33,13 @@ export default function Cardsec1(){
                     <Swiper className='md:max-w-[80%] max-w-[80%] mx-auto'
                         breakpoints={{
                             500:{
-                                slidesPerView:2
+                                slidesPerView:2,
                             },
-                            800:{
+                            768:{
                                 slidesPerView: 4
                         }
                         }}
-                        spaceBetween={30} loop={true} pagination={true} modules={[Pagination]}>
+                        spaceBetween={30} loop={true} pagination={true} modules={[Pagination, Navigation]}>
                             {Card (
                                 '/gojek-1.svg',`Fortune's favorite`,
                                 `Southeast Asia's only company to make it to Fortune's 'Change the World' list twice.`)}
@@ -54,6 +55,9 @@ export default function Cardsec1(){
                                 '/gojek-4.svg',`Digisting merchant`,
                                 `Resulted in 80% growth in number of GoFood merchants during pandemic.`
                             )}
+                        <div className='md:hidden absolute left-0 top-1/3 w-full flex justify-between'>
+                            <SwiperNavBtn />
+                        </div>
                     </Swiper>
                 </div>
             </div>
