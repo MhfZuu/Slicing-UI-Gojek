@@ -52,3 +52,24 @@ body {
 .shadow-4{
   box-shadow: 0 0 32px #4ac9e3
 }
+
+#another > .swiper-pagination{
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 20px;
+  padding-left: 20%;
+  padding-bottom: 50px;
+}
+
+#another > .swiper-pagination >.swiper-pagination-bullet{
+  width:215px;
+  height:4px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
