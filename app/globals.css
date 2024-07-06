@@ -33,28 +33,12 @@ body {
 }
 
 .swiper-pagination-bullet{
-  background-color: #ffffff;
+  background-color: #d3d3d3;
   opacity: .6;
 }
 .swiper-pagination-bullet-active{
   opacity: 1;
   background:#00880d;
-}
-
-.shadow-1{
-  box-shadow: 0 0 32px #7ccc6c
-}
-
-.shadow-2{
-  box-shadow: 0 0 32px #d48bc8
-}
-
-.shadow-3{
-  box-shadow: 0 0 32px #e1ae62
-}
-
-.shadow-4{
-  box-shadow: 0 0 32px #4ac9e3
 }
 
 #another > .swiper-pagination{
