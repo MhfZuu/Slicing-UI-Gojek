@@ -10,17 +10,10 @@ import '@/app/globals.css'
 
 //rgb(124 204 108
 
-function Card(imageUrl :string, color :number, title :string, desc :string){
-    var part;
-    if (color==1) part = 'justify-center p-10 w-full md:min-h-[320px] min-h-[100vw] flex flex-col items-start shadow-1 bg-[#7ccc6c] rounded-[40px]';
-    if (color==2) part = 'justify-center p-10 w-full md:min-h-[320px] min-h-[100vw] flex flex-col items-start shadow-2 bg-[#d48bc8] rounded-[40px]';
-    if (color==3) part = 'justify-center p-10 w-full md:min-h-[320px] min-h-[100vw] flex flex-col items-start shadow-3 bg-[#ffae52] rounded-[40px]';
-    if (color==4) part = 'justify-center p-10 w-full md:min-h-[320px] min-h-[100vw] flex flex-col items-start shadow-4 bg-[#4ac9e3] rounded-[40px]';
-
-
+function Card(imageUrl :string, color :string, title :string, desc :string){
     return(
         <SwiperSlide className='w-auto flex items-center mt-20 mb-8' id='swiperslide'>
-            <div className={part}>
+            <div style={{backgroundColor:color, boxShadow: `0 0 32px ${color}`}} className='justify-center p-10 w-full md:min-h-[320px] min-h-[100vw] flex flex-col items-start shadow-4 rounded-[40px]'>
                 <div className='h-16'>
                     <Image className="absolute lg:-top-[20%] -top-[10%]" src={imageUrl} width={140} height={100} alt='' />
                 </div>
@@ -55,17 +48,17 @@ export default function Cardsec2(){
                     }}}
                     spaceBetween={45} loop={true} pagination={true} slidesPerView={1} modules={[Pagination]}>
                     {Card(
-                        '/gojek-1.svg', 1, '190 million+',
+                        '/gojek-1.svg', '#7ccc6c', '190 million+',
                         'app download since 2015')}
                     {Card(
-                        '/gojek-1.svg', 2, '2 million+',
+                        '/gojek-1.svg', '#d48bc8', '2 million+',
                         'driver partners')}
                     {Card(
-                        '/gojek-1.svg', 3, '900.000+',
+                        '/gojek-1.svg', '#ffae52', '900.000+',
                         'GoFood merchants')}
                     {Card(
-                        '/gojek-1.svg', 4, '2.448x',
-                        'Jump in download from 2015 to 2020')}
+                        '/gojek-1.svg', '#4ac9e3', '2.448x',
+                        'Jump in download from 2015 to 200')}
                     <div className='lg:hidden absolute left-0 top-1/2 w-full flex justify-between'>
                         <SwiperNavBtn />
                     </div>
