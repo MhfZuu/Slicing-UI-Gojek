@@ -12,17 +12,18 @@ const Card = (contents:any[]) => {
     return (
         contents.map((content)=>{
             return(
-                <SwiperSlide>
-                    <div className='rounded-2xl aspect-square md:aspect-video w-full p-6'>
+                <SwiperSlide className='mb-8'>
+                    <div className='aspect-square lg:aspect-[4/3] h-auto '>
                         <Image  src={content.ImageUrl} 
-                                className='object-cover w-full z-0' 
+                                className='rounded-3xl object-cover h-full w-full aspect-square lg:[4/3]' 
                                 width={100} height={100}
                                 unoptimized alt=' '/>
-                        <div className='z-10 absolute top-0 text-left text-white w-full pr-1/2 h-auto'>
-                            <h1 className='text-2xl font-bold'>
+                        <div className='top-0 z-10 absolute text-left px-8 py-14 text-white w-full 
+                                        h-full flex flex-col justify-end'>
+                            <h1 className='text-xl font-bold'>
                                 {content.Headline}
                             </h1>
-                            <p className='text-md'>
+                            <p className='text-sm'>
                                 {content.Desc}
                             </p>
                         </div>
@@ -35,8 +36,14 @@ const Card = (contents:any[]) => {
 
 const Section5= () => {
     return (
-        <div className='bg-white w-full px-[5%]'>
-            <Swiper className='aspect-auto'
+        <div className='bg-white w-full px-[2.5%] md:px-[5%] py-14'>
+            <div className='w-full'>
+                <h1 className='text-center font-bold text-4xl text-black'>
+                    Perks of being good in company
+                </h1>
+            </div>
+
+            <Swiper className='aspect-auto mt-10'
             breakpoints={{
                 768:{
                     slidesPerView:2
@@ -48,7 +55,7 @@ const Section5= () => {
             spaceBetween={45}
             modules={[Pagination]}>
                 {Card(contents)}
-            <div>
+            <div className='absolute top-1/2 w-full'>
                 <SwiperNavBtn />
             </div>
             </Swiper>
@@ -67,7 +74,7 @@ const contents =[{
         'Headline': 'Well benefits',
         'Desc'    : 'We share the bills-health, mobile , internet, and more.'
     },{
-        'ImageUrl': 'https://cdn-site.gojek.com/uploads/Slack_Image_1366x912_9ff18d7b2b.webpp',
+        'ImageUrl': 'https://cdn-site.gojek.com/uploads/Slack_Image_1366x912_9ff18d7b2b.webp',
         'Headline': 'Fly for work & fun',
         'Desc'    : 'Explore new offices, cultures, and a thousand islands!'
     },{
