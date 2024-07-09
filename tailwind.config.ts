@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container:{
+        'padding' : '30px'
+      },
       borderRadius:{
         '6xl' : '70px'
       },
