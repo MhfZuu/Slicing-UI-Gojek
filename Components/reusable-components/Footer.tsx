@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { IoLanguage, IoLocation, IoLogoApple,IoLogoGooglePlaystore } from 'react-icons/io5'
 
 const item1=["About", "Products", "Blog"]
 const item2=["Driver Partner", "Merchant Partner"]
@@ -45,10 +46,25 @@ export default function Footer(){
                         {GridItem("Get In Touch", item4)}
                     </div>
                     <div>
-                        <div className="">
-                            <p className='text-lg font-bold'>Connect With Us</p>
+                        <div className="text-lg font-bold">
+                            <div>
+                                <p>Connect With Us</p>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div className='md:hidden text-black font-semibold space-y-4'>
+                    <p className='text-white text-lg font-bold'>Download The App</p>
+                    <button className='w-full rounded-2xl bg-white flex justify-center
+                                       items-center py-1 gap-2'>
+                        <IoLogoApple/>
+                        App store
+                     </button>
+                    <button className='w-full rounded-2xl bg-white flex justify-center
+                                       items-center py-1 gap-2'>
+                        <IoLogoGooglePlaystore/>
+                        Play store
+                    </button>
                 </div>
             </div>
             <div className="w-4/5 m-auto py-10 lg:py-16 grid
@@ -61,6 +77,22 @@ export default function Footer(){
                 </div>
                 <div></div>
                 <div></div>
+            </div>
+            <div className='w-4/5 mx-auto pb-6 space-y-4'>
+                <div className='flex items-center gap-3'>
+                    <IoLocation className='h-6 w-6'/>
+                    <select className='px-3 py-1 w-full rounded-2xl bg-gray-950 border border-slate-200'>
+                        <option>Indonesia</option>
+                        <option>English</option>
+                    </select>
+                </div>
+                <div className='flex items-center gap-3'>
+                    <IoLanguage className='h-6 w-6'/>
+                    <select className='px-3 py-1 w-full rounded-2xl bg-gray-950 border border-slate-200'>
+                        <option>English</option>
+                        <option>Indonesia</option>
+                    </select>
+                </div>
             </div>
             <div className="text-center w-4/5 mx-auto pb-10">
                 <p>
