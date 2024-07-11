@@ -61,3 +61,29 @@ body {
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
 }
+
+@media (0px < width < 1024px) {
+  #navLink{
+    left: 100%;
+    transition: .4s ease-out;
+  }
+  
+  #navLink.open{
+    transform: translateX(-100%);
+    transition: .4s ease-in-out  ;
+    -webkit-transition: .4s ease-in-out  ;
+    -moz-transition: .4s ease-in-out  ;
+    -ms-transition: .4s ease-in-out  ;
+    -o-transition: .4s ease-in-out  ;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+
+  #another > .swiper-pagination >.swiper-pagination-bullet{
+    width:23%;
+    height:4px;
+    border-radius: 2px;
+  }
+}
