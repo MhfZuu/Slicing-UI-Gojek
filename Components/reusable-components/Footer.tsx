@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { IoLanguage, IoLocation, IoLogoApple,IoLogoGooglePlaystore } from 'react-icons/io5'
+import { BiLogoFacebook, BiLogoInstagramAlt } from 'react-icons/bi'
+import { IoLanguage, IoLocation, IoLogoApple,IoLogoGooglePlaystore,IoLogoTwitter, IoLogoYoutube } from 'react-icons/io5'
 
 const item1=["About", "Products", "Blog"]
 const item2=["Driver Partner", "Merchant Partner"]
@@ -25,7 +26,7 @@ function GridItem(title: string, items: string[]){
 export default function Footer(){
     return (
         <footer className="text-white bg-gray-950 ">
-            <div className="w-4/5 m-auto py-10 lg:py-16 border-b border-neutral-300">
+            <div className="w-4/5 h-auto m-auto py-10 lg:py-16 border-b border-neutral-300">
                 <Image className='mb-14'
                     src="/gojek-horizontal-logo-white.svg" 
                     alt="logo gojek" 
@@ -45,15 +46,28 @@ export default function Footer(){
                     <div>
                         {GridItem("Get In Touch", item4)}
                     </div>
-                    <div>
-                        <div className="text-lg font-bold">
+                    <div className='col-span-2 md:col-span-1'>
+                        <div className="text-lg font-bold space-y-4 ">
                             <div>
                                 <p>Connect With Us</p>
+                                <div className='w-auto flex gap-x-7 md:gap-x-0 lg:gap-x-4'>
+                                    <BiLogoFacebook className='w-8 h-8'/>
+                                    <IoLogoTwitter className='w-8 h-8'/>
+                                    <BiLogoInstagramAlt className='w-8 h-8'/>
+                                    <IoLogoYoutube className='w-8 h-8'/>
+                                </div>
+                            </div>
+                            <div className='hidden lg:block'>
+                                <p>Download The App</p>
+                                <div className='flex gap-x-4'>
+                                    <IoLogoGooglePlaystore className='w-8 h-8'/>
+                                    <IoLogoApple className='w-8 h-8'/>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='md:hidden text-black font-semibold space-y-4'>
+                <div className='md:hidden text-black font-semibold space-y-4 mt-4'>
                     <p className='text-white text-lg font-bold'>Download The App</p>
                     <button className='w-full rounded-2xl bg-white flex justify-center
                                        items-center py-1 gap-2'>
@@ -67,32 +81,29 @@ export default function Footer(){
                     </button>
                 </div>
             </div>
-            <div className="w-4/5 m-auto py-10 lg:py-16 grid
-                            grid-cols-1 md:grid-cols-3">
-                <div className="grid grid-cols-2 gap-x-5 gap-y-3">
-                    <Link href="/" className="underline">Privacy Notice</Link>
-                    <Link href="/" className="underline">Terms & Condition</Link>
-                    <Link href="/" className="underline">Data Attribution</Link>
-                    <Link href="/" className="underline">Cookie Settings</Link>
-                </div>
-                <div></div>
-                <div></div>
-            </div>
-            <div className='w-4/5 mx-auto pb-6 space-y-4'>
-                <div className='flex items-center gap-3'>
-                    <IoLocation className='h-6 w-6'/>
-                    <select className='px-3 py-1 w-full rounded-2xl bg-gray-950 border border-slate-200'>
+            <div className='w-4/5 mx-auto grid md:grid-cols-3 gap-6 py-10 lg:py-16'>
+                <div className="w-full grid grid-cols-1">
+                    <div className="grid grid-cols-2 gap-x-5 gap-y-3">
+                        <Link href="/" className="underline flex items-center">Privacy Notice</Link>
+                        <Link href="/" className="underline flex items-center">Terms & Condition</Link>
+                        <Link href="/" className="underline flex items-center">Data Attribution</Link>
+                        <Link href="/" className="underline flex items-center">Cookie Settings</Link>
+                    </div>
+                </div>    
+                <div className='flex items-start gap-3'>
+                    <IoLocation className='h-6 w-8 my-3'/>
+                    <select className='px-3 py-3 w-full rounded-3xl bg-gray-950 border border-slate-200'>
                         <option>Indonesia</option>
                         <option>English</option>
                     </select>
                 </div>
-                <div className='flex items-center gap-3'>
-                    <IoLanguage className='h-6 w-6'/>
-                    <select className='px-3 py-1 w-full rounded-2xl bg-gray-950 border border-slate-200'>
+                <div className='flex items-start gap-3'>
+                    <IoLanguage className='h-6 w-8 my-3'/>
+                    <select className='px-3 py-3 w-full rounded-3xl bg-gray-950 border border-slate-200'>
                         <option>English</option>
                         <option>Indonesia</option>
                     </select>
-                </div>
+                 </div>
             </div>
             <div className="text-center w-4/5 mx-auto pb-10">
                 <p>
