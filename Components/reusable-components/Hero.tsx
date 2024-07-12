@@ -5,9 +5,8 @@ export default function Hero(){
     return(
     <div className='pt-[80px] lg:pt-[96px] z-0'>
         <div className='w-full lg:aspect-video  aspect-[3/4] flex flex-col h-auto items-center'>
-            <iframe src='https://www.youtube.com/embed/VJH5FJ5kaJA?enablejsapi=1&version=3&controls=0&rel=0&mute=1&playlist=VJH5FJ5kaJA&playsinline=1' 
+            <iframe src='https://www.youtube.com/embed/VJH5FJ5kaJA?enablejsapi=1&version=3&controls=0&rel=0&mute=1&playlist=VJH5FJ5kaJA&playsinline=1&autoplay=1&loop=1' 
                     className='pointer-none hidden lg:block absolute z-10 w-full aspect-video'/>
-            {/* &autoplay=1&loop=1 */}
            <Image className="lg:hidden absolute w-auto h-screen z-0 object-cover " 
                     src="https://cdn-site.gojek.com/uploads/hero_b18c33ed07.jpg" alt="bg-hero"
                     width={100} height={100} unoptimized/> 
