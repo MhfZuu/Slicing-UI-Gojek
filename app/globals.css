@@ -33,12 +33,12 @@ body {
 }
 
 .swiper-pagination-bullet{
-  background-color: #d3d3d3;
+  background-color: rgb(211,211,211);
   opacity: .6;
 }
 .swiper-pagination-bullet-active{
   opacity: 1;
-  background:#00880d;
+  background:rgb(0,136,13);
 }
 
 #another > .swiper-pagination{
