@@ -8,6 +8,7 @@ import Section5 from "../Components/reusable-components/Section5";
 import Section6 from "../Components/reusable-components/Section6";
 import Section7 from "../Components/reusable-components/Section7";
 import Section8 from "../Components/reusable-components/Section8";
+import Section9 from "../Components/reusable-components/Section9";
 import Footer from "../Components/reusable-components/Footer";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <Section6 />
       <Section7 />
       <Section8 />
+      <Section9 />
       <Footer />
     </body>
   );
