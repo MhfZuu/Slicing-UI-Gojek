@@ -65,19 +65,19 @@ export default function Navbar(){
                     id="navLink">
                     
                     <Link href="/">Home</Link>
-                    <Link href="" className="relative">
+                    <div className="relative">
                         {DropDown("Partners with us", partners)}
-                    </Link>
+                    </div>
                     <Link href="/">Carreers</Link>
-                    <Link href="" className="relative">
+                    <div className="relative">
                         {DropDown("Company", company)}
-                    </Link> 
+                    </div> 
                     <Link href="/">Product</Link>
                     <Link href="/">Blog</Link>
                     <Link href="/">Help</Link>
-                    <Link href="" className="relative">
+                    <div className="relative">
                         {DropDown("EN", bahasa)}
-                    </Link>
+                    </div>
                 </div>
                 <button className="lg:hidden pr-4" 
                         onClick={handleNavBtn}>
