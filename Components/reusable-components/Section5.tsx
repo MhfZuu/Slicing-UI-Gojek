@@ -38,7 +38,7 @@ const Section5= () => {
     return (
         <div className='bg-white w-full px-[2.5%] md:px-[5%] py-14'>
             <div className='w-full'>
-                <h1 className='text-center font-bold text-4xl text-black'>
+                <h1 className='text-center font-bold text-3xl md:text-4xl text-black'>
                     Perks of being good in company
                 </h1>
             </div>
