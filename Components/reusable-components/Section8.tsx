@@ -34,7 +34,7 @@ const Section8 = () => {
     const [activeIdx, setActiveIdx] = useState(0)
 
     return (
-        <section className=" bg-[#4ac9e3] lg:h-screen h-[55vh] py-12 overflow-hidden">
+        <section className=" bg-[#4ac9e3] md:h-screen h-[55vh] py-12 overflow-hidden">
             <div className="lg:container mx-auto h-full">
                 <Swiper className='lg:w-2/3 md:w-4/5 w-[95vw]justify-center'
                     slidesPerView={1}
