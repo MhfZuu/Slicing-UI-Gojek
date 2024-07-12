@@ -1,5 +1,7 @@
 "use client"
 
+import Image from 'next/image'
+import Link from 'next/link'
 import { Pagination } from 'swiper/modules'
 import {SwiperSlide, Swiper} from 'swiper/react'
 import SwiperNavBtn from "../reusable-components/SwiperNavBtn"
@@ -19,13 +21,14 @@ const CardRbw=(products:any[])=>{
                             <div style={{backgroundColor: product.color1}} 
                                  className={`p-10 h-[300px] rounded-3xl text-left`}>
 
-                                {product.items.map((item:string)=>{
+                                {product.items.map((item:any)=>{
                                     return (
-                                        <p className='text-xl font-bold'>{item}</p> 
+                                       < Image src={item.url} alt={item.id} width={100} height={32}
+                                               className='w-auto h-8 my-3'/>
                                     )
                                 })}
                             </div>
-                            <h1 className='mt-2 p-3 font-bold'>
+                            <h1 className='mt-2 p-3 font-bold text-xl'>
                                 {product.headline}
                             </h1>
                             <p className='p-3 pt-0'>
@@ -41,9 +44,9 @@ const CardRbw=(products:any[])=>{
 
 const Section6=()=>{
     return(
-        <div className="bg-gray-950 py-20 w-full">
-            <div className="text-white flex flex-col mb-28 items-center gap-2 ">
-                <h1 className="text-center w-4/5 text-5xl font-bold">
+        <div className="bg-gray-950 py-10 md:py-20 w-full">
+            <div className="text-white flex flex-col mb-24 md:mb-28 items-center gap-2 ">
+                <h1 className="text-3xl md:text-4xl text-center w-4/5 lg:text-5xl font-bold">
                     We build products that nations run on
                 </h1>
                 <button className="rounded-3xl bg-[#00880d] w-fit py-3 px-5 text-white font-bold">
@@ -69,6 +72,9 @@ const Section6=()=>{
                     <SwiperNavBtn />
                 </div>
             </Swiper>
+            <div className='w-fit h-fit bg-[#00880d] py-3 px-4 rounded-3xl mx-auto mt-4'>
+                <Link href="/" className='text-white'>View all products</Link>
+            </div>
         </div>
     )
 }
@@ -81,30 +87,79 @@ const products=[
         "color2":"#008c15",
         "headline":"Transport & Logistics",
         "desc":"We've kinda done 13,000 trips between the earth and the moon.",
-        "items":["gobox", "goride", "gobluebird", "gosend" , "gocar"]
+        "items":[
+            {   "id" : "gobox",
+                "url":"https://cdn-site.gojek.com/uploads/gobox_horizontal_logo_white_03f344f3d2.svg"
+            },{ "id" : "goride",
+                "url":"https://cdn-site.gojek.com/uploads/goride_horizontal_logo_white_a2b9d20d84.svg"
+            },{ "id" : "gobluebird",
+                "url":"https://cdn-site.gojek.com/uploads/gobluebird_horizontal_logo_white_97f0e532c4.svg"
+            },{ "id" : "gosend",
+                "url":"https://cdn-site.gojek.com/uploads/gosend_horizontal_logo_white_f53401da5e.svg"
+            },{ "id" : "gocar",
+                "url":"https://cdn-site.gojek.com/uploads/gocar_horizontal_logo_white_786624f7de.svg"
+            }
+        ]
     },{
         "color1":"#00aed6",
         "color2":"#0093b2",
         "headline":"Payments",
         "desc":"From delas to donation, we make transaction easy, reliable, and cashless.",
-        "items":["gopay", "gosure", "goplaylater", "gotagihan"]
+        "items":[
+            {   "id" : "gopay",
+                "url":"https://cdn-site.gojek.com/uploads/gopay_horizontal_logo_white_257d535edd.svg"
+            },{ "id" : "gosure",
+                "url":"https://cdn-site.gojek.com/uploads/gosure_horizontal_logo_white_9aa83831d0.svg"
+            },{ "id" : "gopaylater",
+                "url":"https://cdn-site.gojek.com/uploads/gopaylater_horizontal_logo_white_4c5632c1ab.svg"
+            },{ "id" : "gotagihan",
+                "url":"https://cdn-site.gojek.com/uploads/gotagihan_horizontal_logo_white_41339237ce.svg"
+            }
+        ]
     },{
         "color1":"#ee2737",
         "color2":"#af272f",
         "headline":"Food & Shopping",
         "desc":"Filll your cart with food, electronics, medicines, and more. Without stepping out!",
-        "items":["gomed", "goshop", "gofood", "gomart"]
+        "items":[
+            {   "id" : "gomed",
+                "url": "https://cdn-site.gojek.com/uploads/gomed_horizontal_logo_white_0b7fdfd8ed.svg",
+            },{ "id" : "goshop",
+                "url":"https://cdn-site.gojek.com/uploads/goshop_horizontal_logo_white_9ef721940a.svg"
+            },{ "id" : "gofood",
+                "url":"https://cdn-site.gojek.com/uploads/gofood_horizontal_logo_white_13c7a3f74e.svg"
+            },{ "id" : "gomart",
+                "url":"https://cdn-site.gojek.com/uploads/gomart_horizontal_logo_white_8d2c362daa.svg"
+            }
+        ]
     },{
         "color1":"#93328e",
         "color2":"#80276c",
         "headline":"Bussiness",
         "desc":"Manage your restaurant, run ads, create promos, and do more.",
-        "items":["midtrans", "gostore", "moka", "gobiz", "selly"]
+        "items":[
+            {   "id" : "midtrans",
+                "url":"https://cdn-site.gojek.com/uploads/Midtrans_Horizontal_white_09b12c27ba.svg"
+            },{ "id" : "gostore",
+                "url":"https://cdn-site.gojek.com/uploads/Go_Store_Horizontal_white_16427af66d.svg"
+            },{ "id" : "moka",
+                "url":"https://cdn-site.gojek.com/uploads/Moka_Horizontal_inverse_62111ab44e.svg"
+            },{ "id" : "gobiz",
+                "url":"https://cdn-site.gojek.com/uploads/product_gobiz_29ba1a1838.svg"
+            },{ "id" : "selly",
+                "url":"https://cdn-site.gojek.com/uploads/Selly_Horizontal_white_800d3d2585.svg"
+            }
+        ]
     },{
         "color1":"#df1995",
         "color2":"#aa0061",
         "headline":"Entertaiment",
         "desc":"Binge-watch your favourite series, book ticket, play games,have a goood time!",
-        "items":["gotix"]
+        "items":[
+            {
+                "id" :"gotix",
+                "url":"https://cdn-site.gojek.com/uploads/Selly_Horizontal_white_800d3d2585.svg"
+            }
+        ]
     }
 ]
