@@ -10,13 +10,14 @@ import '@/app/globals.css'
 
 function Card(imageUrl :string, color :string, title :string, desc :string){
     return(
-        <SwiperSlide className='w-auto flex items-center mt-20 mb-8' id='swiperslide'>
+        <SwiperSlide className='w-auto flex items-center mt-20 mb-8 px-5 md:px-10' id='swiperslide'>
             <div style={{backgroundColor:color, boxShadow: `0 0 32px ${color}`}} 
                  className='justify-center p-10 w-full md:min-h-[320px] min-h-[100vw] flex flex-col shadow-4 rounded-[40px]'>
-                <div className='h-16'>
-                    <Image className="absolute lg:-top-[20%] -top-[10%] left-0  w-full h-auto" src={imageUrl} width={140} height={100} alt='' />
+                <div className='h-16 px-5 md:px-10'>
+                    <Image className="absolute lg:-top-[25%] -top-[17%] left-0  w-[90%] md:w-full h-auto" 
+                           src={imageUrl} width={140} height={100} alt='' unoptimized />
                 </div>
-                <div className='pt-6 min-h-20 text-black'>
+                <div className='pt-10 md:pt-6 min-h-20 text-black'>
                     <h3 className='font-bold text-3xl mt-4 mb-2'>
                         {title}
                     </h3>
@@ -31,19 +32,21 @@ function Card(imageUrl :string, color :string, title :string, desc :string){
 
 export default function Cardsec2(){
     return (
-        <div className="bg-white">
+        <div className="bg-white pb-10">
             <div className='flex flex-col gap-1 relative items-center bg-inherit text-black mb-6'>
                 <p className='text-center text-3xl w-5/6 font-bold md:text-4xl lg:text-5xl m-1 md:m-2'>We scale like a dream</p>
                 <div className='z-30 bg-[#00880d] rounded-full w-fit py-2 px-4 text-white'> Scale with us</div>
             </div>
             <div className='w-full' >
-                <Swiper className='lg:max-w-[85%] px-5 max-w-full md:px-10'
+                <Swiper className='lg:max-w-[85%]  max-w-full '
                     breakpoints={{
                         768:{
                             slidesPerView:3,
+                            spaceBetween:35
                         },
                         990:{
                             slidesPerView: 4,
+                            spaceBetween: 40
                     }}}
                     spaceBetween={30} loop={true} pagination={true} slidesPerView={1} modules={[Pagination]}>
                     {Card(
