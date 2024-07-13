@@ -22,7 +22,7 @@ export default function Hero(){
             </div>
         </div>
         <div className='flex flex-col gap-1 relative items-center pt-10 pb-5 bg-gray-900 z-30 text-white  md:pt-20 md:pb-10 
-                        border-b border-neutral-300'>
+                        border-b md:border-none border-slate-300'>
             <p className='text-center text-3xl w-5/6 font-bold md:text-4xl lg:text-5xl m-1 md:m-2'>We're Gojek, the drivers of change</p>
             <div className='z-30 bg-[#00880d] rounded-full w-fit py-2 px-4'> Explore Carreers</div>
         </div>

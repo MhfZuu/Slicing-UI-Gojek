@@ -16,14 +16,14 @@ export default function NextPrevBtn({ setRotation, activeIdx }: NextPrevBtnProps
                         swiper.slidePrev(300,false);
                         activeIdx >0 && setRotation((prevRotation:number)=> prevRotation - 90);
                     }}>
-                        <BiChevronLeft className="h-6 w-6"/>
+                        <BiChevronLeft className="h-6 w-6 text-black"/>
             </button>
             <button className='flex justify-center w-10 h-10 rounded-full bg-gray-300 items-center' 
                     onClick={()=>{
                         swiper.slideNext(300,false);
                         activeIdx <2 && setRotation((prevRotation:number)=> prevRotation + 90);
                     }}>
-                        <BiChevronRight className="h-6 w-6"/>
+                        <BiChevronRight className="h-6 w-6 text-black"/>
             </button>
         </div>
     )

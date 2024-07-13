@@ -8,16 +8,15 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import '@/app/globals.css'
 
-//rgb(124 204 108
-
 function Card(imageUrl :string, color :string, title :string, desc :string){
     return(
         <SwiperSlide className='w-auto flex items-center mt-20 mb-8' id='swiperslide'>
-            <div style={{backgroundColor:color, boxShadow: `0 0 32px ${color}`}} className='justify-center p-10 w-full md:min-h-[320px] min-h-[100vw] flex flex-col items-start shadow-4 rounded-[40px]'>
+            <div style={{backgroundColor:color, boxShadow: `0 0 32px ${color}`}} 
+                 className='justify-center p-10 w-full md:min-h-[320px] min-h-[100vw] flex flex-col shadow-4 rounded-[40px]'>
                 <div className='h-16'>
-                    <Image className="absolute lg:-top-[20%] -top-[10%]" src={imageUrl} width={140} height={100} alt='' />
+                    <Image className="absolute lg:-top-[20%] -top-[10%] left-0  w-full h-auto" src={imageUrl} width={140} height={100} alt='' />
                 </div>
-                <div className='pt-10 min-h-20'>
+                <div className='pt-6 min-h-20 text-black'>
                     <h3 className='font-bold text-3xl mt-4 mb-2'>
                         {title}
                     </h3>
@@ -46,19 +45,19 @@ export default function Cardsec2(){
                         990:{
                             slidesPerView: 4,
                     }}}
-                    spaceBetween={45} loop={true} pagination={true} slidesPerView={1} modules={[Pagination]}>
+                    spaceBetween={30} loop={true} pagination={true} slidesPerView={1} modules={[Pagination]}>
                     {Card(
-                        '/gojek-1.svg', '#7ccc6c', '190 million+',
-                        'app download since 2015')}
+                        'https://cdn-site.gojek.com/uploads/170_mil_340e5c5603.png', 
+                        '#7ccc6c', '190 million+', 'app download since 2015')}
                     {Card(
-                        '/gojek-1.svg', '#d48bc8', '2 million+',
-                        'driver partners')}
+                        'https://cdn-site.gojek.com/uploads/2_million_04b50bc75a.png', 
+                        '#d48bc8', '2 million+','driver partners')}
                     {Card(
-                        '/gojek-1.svg', '#ffae52', '900.000+',
-                        'GoFood merchants')}
+                        'https://cdn-site.gojek.com/uploads/50_million_c34b6365a4.png', 
+                        '#ffae52', '900.000+', 'GoFood merchants')}
                     {Card(
-                        '/gojek-1.svg', '#4ac9e3', '2.448x',
-                        'Jump in download from 2015 to 200')}
+                        'https://cdn-site.gojek.com/uploads/12x_growth_cc1a49b8c3.png',
+                         '#4ac9e3', '2.448x', 'Jump in download from 2015 to 200')}
                     <div className='lg:hidden absolute left-0 top-1/2 w-full flex justify-between'>
                         <SwiperNavBtn />
                     </div>

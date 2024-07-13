@@ -12,7 +12,7 @@ import '@/app/globals.css'
 function Card(imageUrl :string, title :string, desc :string){
     return(
         <SwiperSlide className='flex items-center mb-10'>
-            <div className='flex flex-col items-center text-center'>
+            <div className='flex flex-col text-black items-center text-center'>
                 <Image src={imageUrl} width={140} height={100} alt='' />
                 <h3 className='font-bold text-xl mt-4 mb-2'>
                     {title}
