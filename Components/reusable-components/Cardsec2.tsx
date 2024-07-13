@@ -10,7 +10,7 @@ import '@/app/globals.css'
 
 function Card(imageUrl :string, color :string, title :string, desc :string){
     return(
-        <SwiperSlide className='w-auto flex items-center mt-20 mb-8 px-5 md:px-10' id='swiperslide'>
+        <SwiperSlide className='w-auto flex items-center mt-20 mb-8 px-5' id='swiperslide'>
             <div style={{backgroundColor:color, boxShadow: `0 0 32px ${color}`}} 
                  className='justify-center p-10 w-full md:min-h-[320px] min-h-[100vw] flex flex-col shadow-4 rounded-[40px]'>
                 <div className='h-16 px-5 md:px-10'>
@@ -38,15 +38,15 @@ export default function Cardsec2(){
                 <div className='z-30 bg-[#00880d] rounded-full w-fit py-2 px-4 text-white'> Scale with us</div>
             </div>
             <div className='w-full' >
-                <Swiper className='lg:max-w-[85%]  max-w-full '
+                <Swiper className='md:max-w-[95%]  max-w-full '
                     breakpoints={{
                         768:{
                             slidesPerView:3,
-                            spaceBetween:35
+                            spaceBetween:20
                         },
                         990:{
                             slidesPerView: 4,
-                            spaceBetween: 40
+                            spaceBetween: 20
                     }}}
                     spaceBetween={30} loop={true} pagination={true} slidesPerView={1} modules={[Pagination]}>
                     {Card(
