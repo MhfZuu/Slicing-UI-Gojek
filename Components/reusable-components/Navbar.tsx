@@ -46,7 +46,7 @@ export default function Navbar(){
     return (
         <nav className='w-full fixed z-50 top-0 flex text-white px-0
                         h-20 md:h-24 md:px-4 bg-gray-900 items-center 
-                        md:py-8 justify-between font-gojek text-lg'>
+                        md:py-8 justify-between text-lg'>
             <Link href="/" className="px-[20px]">
                 <Image className='w-[100px] md:w-[120px]'
                     src="/gojek-horizontal-logo-white.svg" 
@@ -56,7 +56,7 @@ export default function Navbar(){
                 />
             </Link>
             
-            <div className="flex justify-center">
+            <div className="flex justify-center md:font-maison-demi font-maison-bold">
 
                 <div className={`${isNavOpen?"open":""} fixed flex flex-col gap-6 
                                 bg-gray-900 w-full h-screen p-6 top-[80px] lg:gap-10 
@@ -72,7 +72,7 @@ export default function Navbar(){
                     <div className="relative">
                         {DropDown("Company", company)}
                     </div> 
-                    <Link href="/">Product</Link>
+                    <Link href="/">Products</Link>
                     <Link href="/">Blog</Link>
                     <Link href="/">Help</Link>
                     <div className="relative">

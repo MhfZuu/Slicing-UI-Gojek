@@ -15,10 +15,10 @@ const SlideCard= (contents:any[]) => {
             return (
                 <SwiperSlide className='h-auto mb-10 flex justify-center'>
                     <div className="text-black text-center flex flex-col items-center space-y-4">
-                        <h1 className="font-extrabold text-2xl lg:text-4xl">{content.country}</h1>
-                        <p className="text-sm font-normal lg:text-md pt-4 w-4/5">{content.desc}</p>
+                        <h1 className="font-maisonext-xbold text-2xl lg:text-4xl">{content.country}</h1>
+                        <p className="text-sm font-maison-book lg:text-md pt-4 w-4/5">{content.desc}</p>
                         <div className='bg-[#00880d] rounded-3xl px-6 py-3 w-fit'>
-                            <p className='font-semibold text-white text-sm'>
+                            <p className='font-maison-demi text-white text-base'>
                                 Enter newsroom
                             </p>
                         </div>
@@ -34,9 +34,9 @@ const Section8 = () => {
     const [activeIdx, setActiveIdx] = useState(0)
 
     return (
-        <section className=" bg-[#4ac9e3] md:h-screen h-[55vh] py-12 overflow-hidden">
+        <section className=" bg-[#4ac9e3] lg:h-auto lg:aspect-video md:h-screen h-[55vh] py-12 overflow-hidden">
             <div className="lg:container mx-auto h-full">
-                <Swiper className='lg:w-2/3 md:w-4/5 w-[95vw]justify-center'
+                <Swiper className='lg:w-2/3 md:w-4/5 w-[95vw] justify-center'
                     slidesPerView={1}
                     pagination={true}
                     onRealIndexChange={(swiper)=>{
@@ -53,7 +53,7 @@ const Section8 = () => {
                 <div>
                     <Image src='https://lelogama.go-jek.com/prime/upload/image/General_impact_-_Globe.svg'
                             width={100} height={100} alt='gojek world'
-                            className='transition ease-linear duration-300 w-full aspect-[2/1]lg:aspect-[3/2]'
+                            className='transition ease-linear duration-300 w-full lg:aspect-[3/2]'
                             style={{transform: `rotate(${rotation}deg)`}}/>
                 </div>
             </div>

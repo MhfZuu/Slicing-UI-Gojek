@@ -10,13 +10,13 @@ const Section7=()=>{
                 </div>
                 <div className="text-white space-y-5 pr-4 flex flex-col justify-center">
                     <div>
-                        <h1 className="text-4xl font-bold mb-8">Gojek Loyalty Program</h1>
-                        <p>
+                        <h1 className="text-3xl md:text-4xl font-maisonext-xbold mb-8">Gojek Loyalty Program</h1>
+                        <p className='text-base font-maison-book'>
                             Make more transaction, get more rewards!
                         </p>
                     </div>
                     <button 
-                        className="rounded-3xl bg-[#00880d] w-fit py-2 px-5 text-white font-bold">
+                        className="rounded-3xl bg-[#00880d] w-fit py-2 px-5 text-white text-base font-maison-demi">
                                 View more
                     </button>
                 </div>

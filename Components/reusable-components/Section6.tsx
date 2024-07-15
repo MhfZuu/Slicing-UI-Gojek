@@ -28,10 +28,10 @@ const CardRbw=(products:any[])=>{
                                     )
                                 })}
                             </div>
-                            <h1 className='mt-2 p-3 font-bold text-xl'>
+                            <h1 className='mt-2 p-3 font-bold text-2xl font-maison-bold'>
                                 {product.headline}
                             </h1>
-                            <p className='p-3 pt-0'>
+                            <p className='p-3 pt-0 text-sm font-maison-book'>
                                 {product.desc}
                             </p>
                         </div>
@@ -46,10 +46,10 @@ const Section6=()=>{
     return(
         <div className="bg-gray-950 py-10 md:py-20 w-full">
             <div className="text-white flex flex-col mb-24 md:mb-28 items-center gap-2 ">
-                <h1 className="text-3xl md:text-4xl text-center w-4/5 lg:text-5xl font-bold">
+                <h1 className="text-3xl md:text-4xl text-center w-4/5 font-maisonext-xbold">
                     We build products that nations run on
                 </h1>
-                <button className="rounded-3xl bg-[#00880d] w-fit py-3 px-5 text-white font-bold">
+                <button className="rounded-3xl bg-[#00880d] w-fit py-3 px-5 text-white text-base font-maison-demi">
                     View all products
                 </button>
             </div>
@@ -72,7 +72,7 @@ const Section6=()=>{
                     <SwiperNavBtn />
                 </div>
             </Swiper>
-            <div className='w-fit h-fit bg-[#00880d] py-3 px-4 rounded-3xl mx-auto mt-4'>
+            <div className='w-fit h-fit bg-[#00880d] py-3 px-4 rounded-3xl mx-auto mt-4 text-base font-maison-demi'>
                 <Link href="/" className='text-white'>View all products</Link>
             </div>
         </div>

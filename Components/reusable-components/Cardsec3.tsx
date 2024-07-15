@@ -33,8 +33,8 @@ const Cardsec3 =()=>{
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-1/2 h-full flex flex-col justify-center left-[10%] absolute text-white">
-                        <h1 className="mb-8 font-bold text-5xl">Enjoy a variety of reward especially for you here</h1>
-                        <button className="w-fit rounded-3xl bg-[#00880d] py-3 px-5 text-md font-bold ">
+                        <h1 className="mb-8 font-maisonext-xbold text-4xl">Enjoy a variety of reward especially for you here</h1>
+                        <button className="w-fit rounded-3xl bg-[#00880d] py-3 px-5 text-base font-maison-demi ">
                             Know more!
                         </button>
                     </div>

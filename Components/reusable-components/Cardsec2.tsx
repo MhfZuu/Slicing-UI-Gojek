@@ -18,10 +18,10 @@ function Card(imageUrl :string, color :string, title :string, desc :string){
                            src={imageUrl} width={140} height={100} alt='' unoptimized />
                 </div>
                 <div className='pt-10 md:pt-6 min-h-20 text-black'>
-                    <h3 className='font-bold text-3xl mt-4 mb-2'>
+                    <h3 className='font-maisonext-xbold text-3xl mt-4 mb-2'>
                         {title}
                     </h3>
-                    <p className='text-sm md:text-md'>
+                    <p className='text-sm md:text-base font-maison-book'>
                         {desc}
                     </p>
                 </div>
@@ -34,8 +34,8 @@ export default function Cardsec2(){
     return (
         <div className="bg-white pb-10">
             <div className='flex flex-col gap-1 relative items-center bg-inherit text-black mb-6'>
-                <p className='text-center text-3xl w-5/6 font-bold md:text-4xl lg:text-5xl m-1 md:m-2'>We scale like a dream</p>
-                <div className='z-30 bg-[#00880d] rounded-full w-fit py-2 px-4 text-white'> Scale with us</div>
+                <p className='font-maisonext-xbold text-center text-3xl w-5/6 md:text-3xl lg:text-4xl m-1 md:m-2'>We scale like a dream</p>
+                <div className='z-30 bg-[#00880d] rounded-full w-fit py-2 px-4 text-white font-maison-demi'> Scale with us</div>
             </div>
             <div className='w-full' >
                 <Swiper className='md:max-w-[95%]  max-w-full '

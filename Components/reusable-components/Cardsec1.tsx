@@ -14,10 +14,10 @@ function Card(imageUrl :string, title :string, desc :string){
         <SwiperSlide className='flex items-center mb-10'>
             <div className='flex flex-col text-black items-center text-center'>
                 <Image src={imageUrl} width={140} height={100} alt='' />
-                <h3 className='font-bold text-xl mt-4 mb-2'>
+                <h3 className='font-maison-bold text-2xl mt-4 mb-2'>
                     {title}
                 </h3>
-                <p className='text-sm md:text-md'>
+                <p className='text-sm md:text-base font-maison-book'>
                     {desc}
                 </p>
             </div>

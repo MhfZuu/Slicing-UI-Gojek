@@ -15,15 +15,15 @@ const Card = (contents:any[]) => {
                 <SwiperSlide className='mb-8'>
                     <div className='aspect-square lg:aspect-[4/3] h-auto '>
                         <Image  src={content.ImageUrl} 
-                                className='rounded-3xl object-cover h-full w-full aspect-square lg:[4/3]' 
+                                className='rounded-[50px] object-cover h-full w-full aspect-square lg:[4/3]' 
                                 width={100} height={100}
                                 unoptimized alt=' '/>
                         <div className='top-0 z-10 absolute text-left px-8 py-14 text-white w-full 
                                         h-full flex flex-col justify-end'>
-                            <h1 className='text-xl font-bold'>
+                            <h1 className='text-2xl font-maison-bold'>
                                 {content.Headline}
                             </h1>
-                            <p className='text-sm'>
+                            <p className='text-base font-maison-book'>
                                 {content.Desc}
                             </p>
                         </div>
@@ -38,7 +38,7 @@ const Section5= () => {
     return (
         <div className='bg-white w-full px-[2.5%] md:px-[5%] py-14'>
             <div className='w-full'>
-                <h1 className='text-center font-bold text-3xl md:text-4xl text-black'>
+                <h1 className='text-center font-maisonext-xbold text-3xl md:text-4xl text-black'>
                     Perks of being good in company
                 </h1>
             </div>

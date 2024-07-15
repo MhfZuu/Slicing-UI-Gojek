@@ -11,10 +11,10 @@ const item4=["Help Center", "Our Location"]
 function GridItem(title: string, items: string[]){
     return (
         <div className="">
-            <p className='text-lg font-bold'>{title}</p>
+            <p className='text-lg font-maison-demi'>{title}</p>
             <ul className='space-y-4'>
                 {items.map((item) => (
-                    <li className="mt-4">
+                    <li className="text-base font-maison-book mt-4">
                         <Link href="/">{item}</Link>
                     </li>
                 ))}
@@ -47,7 +47,7 @@ export default function Footer(){
                         {GridItem("Get In Touch", item4)}
                     </div>
                     <div className='col-span-2 md:col-span-1'>
-                        <div className="text-lg font-bold space-y-4 ">
+                        <div className="text-lg font-maison-demi space-y-4 ">
                             <div>
                                 <p>Connect With Us</p>
                                 <div className='w-auto flex gap-x-7 md:gap-x-0 lg:gap-x-4'>
@@ -67,15 +67,15 @@ export default function Footer(){
                         </div>
                     </div>
                 </div>
-                <div className='md:hidden text-black font-semibold space-y-4 mt-4'>
-                    <p className='text-white text-lg font-bold'>Download The App</p>
+                <div className='md:hidden text-black space-y-4 mt-4'>
+                    <p className='text-white text-lg font-maison-demi'>Download The App</p>
                     <button className='w-full rounded-2xl bg-white flex justify-center
-                                       items-center py-1 gap-2'>
+                                       items-center py-1 gap-2 text-base font-maison-book'>
                         <IoLogoApple/>
                         App store
                      </button>
                     <button className='w-full rounded-2xl bg-white flex justify-center
-                                       items-center py-1 gap-2'>
+                                       items-center py-1 gap-2 text-base font-maison-book'>
                         <IoLogoGooglePlaystore/>
                         Play store
                     </button>
@@ -83,7 +83,7 @@ export default function Footer(){
             </div>
             <div className='w-4/5 mx-auto grid md:grid-cols-3 gap-6 py-10 lg:py-16'>
                 <div className="w-full grid grid-cols-1">
-                    <div className="grid grid-cols-2 gap-x-5 gap-y-3">
+                    <div className="grid grid-cols-2 gap-x-5 gap-y-3 text-base font-maison-book">
                         <Link href="/" className="underline flex items-center">Privacy Notice</Link>
                         <Link href="/" className="underline flex items-center">Terms & Condition</Link>
                         <Link href="/" className="underline flex items-center">Data Attribution</Link>
@@ -92,21 +92,21 @@ export default function Footer(){
                 </div>    
                 <div className='flex items-start gap-3'>
                     <IoLocation className='h-6 w-8 my-3'/>
-                    <select className='px-3 py-3 w-full rounded-3xl bg-gray-950 border border-slate-200'>
+                    <select className='text-base font-maison-book px-3 py-3 w-full rounded-3xl bg-gray-950 border border-slate-200'>
                         <option>Indonesia</option>
                         <option>English</option>
                     </select>
                 </div>
                 <div className='flex items-start gap-3'>
                     <IoLanguage className='h-6 w-8 my-3'/>
-                    <select className='px-3 py-3 w-full rounded-3xl bg-gray-950 border border-slate-200'>
+                    <select className='text-base font-maison-book px-3 py-3 w-full rounded-3xl bg-gray-950 border border-slate-200'>
                         <option>English</option>
                         <option>Indonesia</option>
                     </select>
                  </div>
             </div>
             <div className="text-center w-4/5 mx-auto pb-10">
-                <p>
+                <p className='text-base font-maison-book'>
                 © 2023 Gojek | Gojek is a trademark of PT GoTo Gojek Tokopedia Tbk. 
                 Registered in the Directorate General of Intellectual Property of 
                 the Republic of Indonesia.
