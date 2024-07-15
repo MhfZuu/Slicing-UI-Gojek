@@ -15,8 +15,10 @@ const config: Config = {
         '6xl' : '70px'
       },
       fontFamily:{
-        "heading":["var(--font-gojek","sans-serif"],
-        "header1":["text-red font-medium"]
+        "maison-bold":["var(--font-maison-bold)","sans-serif"],
+        "maison-demi":["var(--font-maison-demi)","sans-serif"],
+        "maison-book":["var(--font-maison-book)","sans-serif"],
+        "maisonext-xbold":["var(--font-maisonext-xtrabold)", "sans-serif"]
       },
       color:{
         "white":"#ffffff",
